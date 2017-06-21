@@ -8,4 +8,6 @@ using namespace std;
 
 #define EPSILON (1e-8)
 
+int equalf(double a, double b);
+
 #endif
