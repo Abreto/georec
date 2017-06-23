@@ -21,3 +21,10 @@ void correction_pitch(camera_t cam, Point2f src, Point2f& dst, double pitch_angl
         dst.y = ky * dy + cam.y;
     }
 }
+
+void correction_pitch(camera_t cam, vecp2f src, vecp2f& dst, double pitch_angle_deg)
+{
+    int i = 0, n = src.size();
+    for(i = 0;i < n;++i)
+        correction_pitch(cam, src[i], dst[i], pitch_angle_deg);
+}
