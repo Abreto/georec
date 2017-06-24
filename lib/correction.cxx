@@ -65,6 +65,6 @@ void correction_angle(camera_t cam, vecp2f src, vecp2f& dst, double pitch_angle_
             correction_pitch(cam, src, dst, pitch_angle_deg);
         else
             correction_roll(cam, src, dst, roll_angle_deg);
-        b >>= 1;
+        order >>= 1;
     }
 }
