@@ -5,6 +5,8 @@
 
 #include <opencv2/opencv.hpp>
 
+using namespace cv;
+
 void projection_trans(Mat src, Mat& dst, vecp2f original, vecp2f corrected, int interp);
 
 #endif
