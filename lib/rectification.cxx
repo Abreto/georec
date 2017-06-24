@@ -1,6 +1,7 @@
 /*  */
 #include <rectification.hxx>
 #include <correction.hxx>
+#include <transformation.hxx>
 
 void image_rectification(Mat src, Mat& dst, camera_t cam, double pitch_angle_deg, double roll_angle_deg, int order)
 {
