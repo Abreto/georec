@@ -55,3 +55,16 @@ void correction_roll(camera_t cam, vecp2f src, vecp2f& dst, double roll_angle_de
     for(i = 0;i < n;++i)
         correction_roll(cam, src[i], dst[i], roll_angle_deg);
 }
+
+void correction_angle(camera_t cam, vecp2f src, vecp2f& dst, double pitch_angle_deg, double roll_angle_deg, int order)
+{
+    int i = 0;
+    for(i = 0;i < 2;++i)
+    {
+        if( order & 1 )
+            correction_pitch(cam, src, dst, pitch_angle_deg);
+        else
+            correction_roll(cam, src, dst, roll_angle_deg);
+        b >>= 1;
+    }
+}
